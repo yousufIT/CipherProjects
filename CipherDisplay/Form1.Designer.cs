@@ -108,6 +108,11 @@ namespace CipherDisplay
             btnVigenere_Decrypt = new Button();
             btnVigenere_Encrypt = new Button();
             tbSHA = new TabPage();
+            label23 = new Label();
+            label21 = new Label();
+            txtText1 = new TextBox();
+            txtText2 = new TextBox();
+            btnCompare = new Button();
             label25 = new Label();
             lblSHA = new Label();
             txtSHAResult = new TextBox();
@@ -1000,6 +1005,11 @@ namespace CipherDisplay
             // 
             // tbSHA
             // 
+            tbSHA.Controls.Add(label23);
+            tbSHA.Controls.Add(label21);
+            tbSHA.Controls.Add(txtText1);
+            tbSHA.Controls.Add(txtText2);
+            tbSHA.Controls.Add(btnCompare);
             tbSHA.Controls.Add(label25);
             tbSHA.Controls.Add(lblSHA);
             tbSHA.Controls.Add(txtSHAResult);
@@ -1013,14 +1023,58 @@ namespace CipherDisplay
             tbSHA.Text = "SHA";
             tbSHA.UseVisualStyleBackColor = true;
             // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Location = new Point(22, 281);
+            label23.Name = "label23";
+            label23.Size = new Size(98, 20);
+            label23.TabIndex = 10;
+            label23.Text = "Second Hash:";
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(32, 235);
+            label21.Name = "label21";
+            label21.Size = new Size(76, 20);
+            label21.TabIndex = 9;
+            label21.Text = "First Hash:";
+            // 
+            // txtText1
+            // 
+            txtText1.Location = new Point(125, 274);
+            txtText1.Multiline = true;
+            txtText1.Name = "txtText1";
+            txtText1.Size = new Size(622, 27);
+            txtText1.TabIndex = 8;
+            // 
+            // txtText2
+            // 
+            txtText2.Location = new Point(125, 228);
+            txtText2.Multiline = true;
+            txtText2.Name = "txtText2";
+            txtText2.Size = new Size(622, 27);
+            txtText2.TabIndex = 7;
+            // 
+            // btnCompare
+            // 
+            btnCompare.Location = new Point(380, 320);
+            btnCompare.Name = "btnCompare";
+            btnCompare.Size = new Size(115, 29);
+            btnCompare.TabIndex = 6;
+            btnCompare.Text = "Compare";
+            btnCompare.UseVisualStyleBackColor = true;
+            btnCompare.Click += btnCompare_Click;
+            // 
             // label25
             // 
             label25.AutoSize = true;
             label25.Location = new Point(32, 106);
             label25.Name = "label25";
-            label25.Size = new Size(82, 20);
+            label25.Size = new Size(85, 20);
             label25.TabIndex = 5;
-            label25.Text = "Hash Value";
+            label25.Text = "Hash Value:";
             label25.Click += label25_Click;
             // 
             // lblSHA
@@ -1028,9 +1082,9 @@ namespace CipherDisplay
             lblSHA.AutoSize = true;
             lblSHA.Location = new Point(32, 29);
             lblSHA.Name = "lblSHA";
-            lblSHA.Size = new Size(67, 20);
+            lblSHA.Size = new Size(70, 20);
             lblSHA.TabIndex = 4;
-            lblSHA.Text = "plaintext";
+            lblSHA.Text = "plaintext:";
             // 
             // txtSHAResult
             // 
@@ -1214,5 +1268,8 @@ namespace CipherDisplay
         private Button btnComputeSHA;
         private Label label25;
         private Label lblSHA;
+        private TextBox txtText1;
+        private TextBox txtText2;
+        private Button btnCompare;
     }
 }

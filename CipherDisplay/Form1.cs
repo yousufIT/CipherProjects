@@ -279,5 +279,20 @@ namespace CipherDisplay
         {
 
         }
+
+        private void btnCompare_Click(object sender, EventArgs e)
+        {
+            string text1 = txtText1.Text;
+            string text2 = txtText2.Text;
+
+            if (text1 == text2)
+            {
+                MessageBox.Show("The texts are identical.");
+            }
+            else
+            {
+                MessageBox.Show("The texts are different.");
+            }
+        }
     }
 }
