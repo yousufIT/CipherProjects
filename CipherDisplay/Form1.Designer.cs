@@ -1026,7 +1026,7 @@ namespace CipherDisplay
             // label23
             // 
             label23.AutoSize = true;
-            label23.Location = new Point(22, 281);
+            label23.Location = new Point(11, 348);
             label23.Name = "label23";
             label23.Size = new Size(98, 20);
             label23.TabIndex = 10;
@@ -1043,23 +1043,23 @@ namespace CipherDisplay
             // 
             // txtText1
             // 
-            txtText1.Location = new Point(125, 274);
+            txtText1.Location = new Point(125, 348);
             txtText1.Multiline = true;
             txtText1.Name = "txtText1";
-            txtText1.Size = new Size(622, 27);
+            txtText1.Size = new Size(622, 83);
             txtText1.TabIndex = 8;
             // 
             // txtText2
             // 
-            txtText2.Location = new Point(125, 228);
+            txtText2.Location = new Point(125, 235);
             txtText2.Multiline = true;
             txtText2.Name = "txtText2";
-            txtText2.Size = new Size(622, 27);
+            txtText2.Size = new Size(622, 83);
             txtText2.TabIndex = 7;
             // 
             // btnCompare
             // 
-            btnCompare.Location = new Point(380, 320);
+            btnCompare.Location = new Point(753, 319);
             btnCompare.Name = "btnCompare";
             btnCompare.Size = new Size(115, 29);
             btnCompare.TabIndex = 6;
@@ -1088,15 +1088,16 @@ namespace CipherDisplay
             // 
             // txtSHAResult
             // 
-            txtSHAResult.Location = new Point(125, 99);
+            txtSHAResult.Location = new Point(125, 106);
             txtSHAResult.Multiline = true;
             txtSHAResult.Name = "txtSHAResult";
-            txtSHAResult.Size = new Size(622, 27);
+            txtSHAResult.Size = new Size(622, 83);
             txtSHAResult.TabIndex = 3;
             // 
             // txtSHAInput
             // 
             txtSHAInput.Location = new Point(125, 22);
+            txtSHAInput.Multiline = true;
             txtSHAInput.Name = "txtSHAInput";
             txtSHAInput.Size = new Size(622, 27);
             txtSHAInput.TabIndex = 2;

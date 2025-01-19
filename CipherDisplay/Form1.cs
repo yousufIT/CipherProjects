@@ -256,7 +256,7 @@ namespace CipherDisplay
             }
 
             SHA sha = new SHA();
-            string hashResult = sha.ComputeSHA256Hash(input);
+            string hashResult = sha.ComputeSHA512Hash(input);
 
             txtSHAResult.Text = hashResult;
         }
@@ -269,7 +269,7 @@ namespace CipherDisplay
                 string filePath = openFileDialog.FileName;
 
                 SHA sha = new SHA();
-                string hashResult = sha.ComputeFileSHA256Hash(filePath);
+                string hashResult = sha.ComputeFileSHA512Hash(filePath);
 
                 txtSHAResult.Text = hashResult;
             }

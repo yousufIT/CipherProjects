@@ -5,12 +5,12 @@ using System.IO;
 
 public class SHA
 {
-    public string ComputeSHA256Hash(string input)
+    public string ComputeSHA512Hash(string input)
     {
-        using (SHA256 sha256 = SHA256.Create())
+        using (SHA512 sha512 = SHA512.Create())
         {
             byte[] bytes = Encoding.UTF8.GetBytes(input);
-            byte[] hashBytes = sha256.ComputeHash(bytes);
+            byte[] hashBytes = sha512.ComputeHash(bytes);
 
             StringBuilder result = new StringBuilder();
             foreach (byte b in hashBytes)
@@ -20,12 +20,12 @@ public class SHA
         }
     }
 
-    public string ComputeFileSHA256Hash(string filePath)
+    public string ComputeFileSHA512Hash(string filePath)
     {
-        using (SHA256 sha256 = SHA256.Create())
+        using (SHA512 sha512 = SHA512.Create())
         using (FileStream fileStream = File.OpenRead(filePath))
         {
-            byte[] hashBytes = sha256.ComputeHash(fileStream);
+            byte[] hashBytes = sha512.ComputeHash(fileStream);
 
             StringBuilder result = new StringBuilder();
             foreach (byte b in hashBytes)
